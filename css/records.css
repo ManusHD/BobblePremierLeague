@@ -1,0 +1,49 @@
+body{
+    background-image: url('../imagenes/fondopaginaweb_liga2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+h1{
+    text-align: center;
+    color: #323232;
+    background-color: var(--color-historico);
+    margin: 0;
+    padding: 0.1em;
+    font-size: 3em;
+}
+
+.contenido{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.nombre{
+    background-color: #323232;
+    color: var(--color-historico);
+    margin: 0;
+}
+
+table{
+    border: 1px solid;
+    border-collapse: collapse;
+    height: fit-content;
+    font-size: 2em;
+}
+
+#tabla2{
+    border: 1px solid;
+    font-size: 1.2em;
+    background-color: rgb(255, 255, 255, 0.5) ;
+}
+
+#tabla2 .nombre{
+    padding: 0.5em;
+}
+
+td{
+    border: 1px solid #000;
+    padding: 1em;
+}
+

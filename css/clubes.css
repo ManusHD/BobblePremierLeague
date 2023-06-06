@@ -1,0 +1,76 @@
+body{
+  background-image: url('../imagenes/fondopaginaweb_liga2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.equipo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5em;
+}
+
+.imagenes .escudo {
+    max-height: 15em;
+}
+
+.imagenes h1 {
+    font-size: 3em;
+}
+
+.imagenes {
+    position: relative;
+    transition: all .3s ease;
+}
+
+.imagenes .carta {
+    position: absolute;
+    top: -15px;
+    left: -159px;
+    width: 35em;
+    padding: 0;
+    transition: .3s ease;
+    opacity: 0;
+}
+
+.imagenes:hover .escudo{
+    transform: perspective(250px)
+    rotateX(10deg)
+    translateY(-5%)
+    translateZ(0);
+}
+
+.imagenes:hover .carta{
+    opacity: 1;
+    transform: translateY(-10%);
+}
+
+.imagenes:hover .escudo{
+    transition: .3s ease;
+    opacity: 0;
+}
+
+.descripcion{
+    max-width: 25em;
+    font-size: 1.3em;
+}
+
+.descripcion p{
+    text-align: justify;
+}
+
+.descripcion h1{
+    text-align: center;
+}
+
+.presidente{
+    font-weight: lighter;
+    font-size: 1em;
+    margin: 0;
+    font-style: italic;
+}
+
+h1{
+    margin-bottom: 0;
+}

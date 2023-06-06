@@ -1,0 +1,186 @@
+
+:root{
+    --color-t1: #f6365f;
+    --color-t2: #26c188;
+    --color-t3: #d7b104;
+    --color-liga-actual: #d7b104;
+    --color-fondo: #000;
+    --boton-clubes: #d9aa00;
+    --color-text-primary: #f8df94;
+    --color-text-secondary: #8A8F98;
+    --color-text-alert: #d72641;
+    --color-text-icon: #dbdade;
+    --color-bg-primary: #fff;
+    --color-bg-secondary: #f3f5f9;
+    --color-bg-alert: #fdeaec;
+    --color-theme-primary: #623ce6;
+    --rojo-champion: #7e2019;
+    --color-historico: #cda434;
+    --color-t4: #00e5ca;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    justify-content: center;
+    margin: 0;
+}
+
+.navbar .img,
+footer .img {
+    max-height: 50px;
+    max-width: 100px;
+}
+
+.logo {
+    padding: 0 20px;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: var(--color-fondo);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+	box-shadow: 0 5px 25px rgba(0,0,0,.6);
+}
+
+.navbar label{
+    background-color: var(--color-liga-actual);
+    border-radius: 5px;
+}
+
+.label {
+    display: none;
+}
+
+.lista {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.lista .list {
+    text-decoration: none;
+    color: var(--color-liga-actual);
+    padding: 0.75em;
+}
+
+.lista .list:hover,
+label:hover {
+    background-color: var(--color-liga-actual);
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/*CSS de fundar club*/
+
+#fundar {
+    border-radius: 10px;
+    background-color: var(--color-liga-actual);
+    color: var(--color-fondo);
+}
+
+
+#fundar:hover {
+    background: var(--color-liga-actual);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--color-liga-actual),
+        0 0 25px var(--color-liga-actual),
+        0 0 50px var(--color-liga-actual),
+        0 0 100px var(--color-liga-actual);
+}
+
+.btn-partidos, .btn-partidos-liga{
+    position: absolute;
+    margin: 7em 2em;
+}
+
+.btn-partidos a, .btn-partidos-liga a{
+    background-color: var(--rojo-champion);
+    color: #fff;
+    padding: 1em;
+    border-radius: 20px;
+    border: 2px solid var(--rojo-champion);
+}
+
+.btn-partidos a:hover{
+    background-color: var(--rojo-champion);
+    box-shadow: 0 0 5px var(--rojo-champion),
+              0 0 25px var(--rojo-champion);
+}
+
+.btn-partidos-liga a{
+    background-color: var(--color-liga-actual);
+    border: 2px solid var(--color-liga-actual);
+}
+
+.btn-partidos-liga a:hover{
+    box-shadow: 0 0 5px var(--color-liga-actual),
+              0 0 25px var(--color-liga-actual);
+}
+
+@media screen and (max-width:1080px) {
+    .navbar {
+        position: relative;
+        z-index: 1;
+        top: 0;
+    }
+
+    .label {
+        display: block;
+        margin-left: auto;
+        padding: 10px;
+    }
+
+    .lista {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        position: absolute;
+        background-color: var(--color-fondo);
+        border-bottom-left-radius: 5px;
+        text-align: center;
+        top: 0px;
+        right: 0px;
+        visibility: hidden;
+        opacity: 0;
+        color: var(--color-liga-actual);
+    }
+
+    .lista .list:hover {
+        background-color: var(--color-liga-actual);
+        border-bottom-left-radius: 5px;
+    }
+
+
+    .lista .list {
+        color: #323232;
+        color: var(--color-liga-actual);
+    }
+
+    .lista .label{
+        color: var(--color-fondo);
+    }
+
+    .lista .label:hover{
+        color: #fff;
+    }
+
+    .lista .list {
+        width: 100%;
+        text-decoration: none;
+        padding: 1em;
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+
+    input:checked~.lista {
+        visibility: visible;
+        opacity: 1;
+    }
+
+}

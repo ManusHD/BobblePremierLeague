@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Inicio</title>
+	<script src="scripts/inicio.js"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="imagenes/isotipo.png"/>
+	<link href="css/cabecera.css" rel="stylesheet">
+	<link href="css/inicio.css" rel="stylesheet">
+	<link href="css/footer.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<!--Aquí empieza la cabecera-->
+	<div class="navbar">
+		<a class="logo" href="index.html"><img class="img" src="imagenes/isotipo.png"></a>
+		<input type="checkbox" id="menu" hidden>
+		<label class="label" for="menu"><i class="fa fa-bars"></i></label>
+		<div class="lista"> <!--Este es su nav-->
+			<label class="label" for="menu">X</label> <!--Este es su label-->
+			<a class="list" href="clasificacion.html">Clasificación</a> <!--Esta es su ul-->
+			<a class="list" href="partidos.html">Próximos partidos</a>
+			<a class="list" href="champions.html">Bobble Champions Cup</a>
+			<a class="list" href="premios.html">Premios Bobble</a>
+			<a class="list" href="records.html">Récords Bobble</a>
+			<a class="list" id="fundar" href="fundarClub.html">Funda tu club</a>
+		</div>
+	</div>
+	<!--Aquí termina la cabecera-->
+
+
+	<div class="cuerpo">
+		<div class="slideshow-container">
+
+			<div class="mySlides fade">
+				<img class="imagenesSlider" src="imagenes/Intro.gif" >
+			</div>
+
+			<div class="mySlides fade">
+				<img class="imagenesSlider" src="imagenes/sliders_2.png" >
+			</div>
+
+			<div class="mySlides fade">
+				<img class="imagenesSlider" src="imagenes/sliders_3.png" >
+			</div>
+
+			<div class="mySlides fade">
+				<img class="imagenesSlider" src="imagenes/sliders_4.png" >
+			</div>
+			
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+		</div>
+
+		<br>
+
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+		</div>
+		<script src="scripts/inicio.js"></script>
+
+		<div class="centrar">
+
+			<div class="explicacion">
+				<h1>SOBRE NOSOTROS</h1>
+				<p>
+					Única Liga Oficial de Bobble de habla Hispana.
+					Toda la élite del Bobble en una liga seria y organizada para dar el mayor
+					espectáculo posible con el mejor equipo de trabajo, gracias a la colaboración
+					conjunta de federación y los participantes de la liga así como la afición.
+					La "Bobble Premier League" está realizada por la Federación de Bobble, compuesta
+					por 4 miembros de la Liga, que organizan todas las labores para el correcto
+					funcionamiento de la misma.
+				</p>
+				<p>
+					En esta Liga se realizan partidos por jornadas para saber quien será el campeón y
+					cuantos de ellos se clasificarán para la competición más exclusiva de esta
+					organización, la "Bobble Champions Cup".
+				</p>
+				<p>
+
+					Por ahora la "Bobble Premier League" solo dispone de una división, pero a lo largo
+					del tiempo y con la fundación de nuevos equipos, se podría crear una segunda
+					división.
+				</p>
+				<p>
+
+					La Federación de Bobble también realiza las labores de organización de
+					tablas de clasificaciones, próximos partidos, partidos de pretemporada,
+					Bobble Champions Cup, premios Bobble, récords Bobble, reglas de la Bobble,
+					tabla de sanciones y estadísticas de Liga.
+				</p>
+				<p>
+					Todos los partidos de la "Bobble Premier League" y de la 
+					"Bobble Champions Cup" son grabados y
+					subidos a Youtube en el canal oficial.
+				</p>
+				<p>
+					<a href="https://www.youtube.com/@bobblepremierleagueofficial" target="_blank"><img src="imagenes/youtube.png"></a>
+				</p>
+			</div>
+		</div>
+
+
+		<div class="clubes">
+			<a id="clubes" href="clubes.html">Clubes</a>
+		</div>
+
+	</div>
+
+	<br><br><br><br><br><br><br><br><br><br>
+
+	<!--Aquí empieza el footer-->
+	<footer>
+		<a class="logo" href="index.html"><img class="img" src="imagenes/Logo.png"></a>
+		<div class="medioFooter">
+		  <p><a href="reglas.html">Reglas</a></p>
+		  <p><a href="sanciones.html" >Sanciones</a></p>
+		  <p><a href="tablaSanciones.html">Tabla de sanciones</a></p>
+		  <p><a href="estadisticas.html">Estadísticas</a></p>
+		</div>
+		<div class="rrss">
+		  <a href="https://www.youtube.com/@bobblepremierleagueofficial" target="_blank"><img src="imagenes/youtube.png"></a>
+		  <br>
+		  <a href="https://www.tiktok.com/@bobblepremierleague" target="_blank"><img src="imagenes/tiktok.png"></a>
+		  <a href="https://twitter.com/bobblepl_es" style="padding-top:4px" target="_blank"><img src="imagenes/logotwitter.png"></a>
+		</div>
+	  </footer>
+
+</body>
+
+</html>

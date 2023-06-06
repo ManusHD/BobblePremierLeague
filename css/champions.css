@@ -1,0 +1,296 @@
+.bracket {
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 735px;
+    margin-top: 5em;
+    color: var(--color-text-primary);
+}
+
+/*
+.team{
+    display: flex;
+    justify-content: space-between;
+}
+
+.team p{
+    width: 33%;
+}
+*/
+.semis {
+    text-align: center;
+}
+
+.final {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8em;
+}
+
+#final, #semis{
+    font-size: 3em;
+}
+
+
+.team-logo img {
+    width: 5em;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-text-primary: #f8df94;
+    --color-text-secondary: #8A8F98;
+    --color-text-alert: #d72641;
+    --color-text-icon: #dbdade;
+    --color-bg-primary: #fff;
+    --color-bg-secondary: #f3f5f9;
+    --color-bg-alert: #fdeaec;
+    --color-theme-primary: #623ce6;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+img {
+    display: block;
+}
+
+strong {
+    font-weight: 600;
+}
+
+
+.match {
+    background-color: var(--color-bg-primary);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 10px;
+    background-color: var();
+    box-shadow: 0 0 5px var(--color-text-primary),
+              0 0 25px var(--color-text-primary);
+    border: 3px solid;
+    background-image: url("../imagenes/fondopartidos_championsviejo.png");
+    color: var(--color-text-primary);
+    margin: 2em;
+    width: 40em;
+    height: 18em;
+}
+
+/*
+.match-header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgba(#303030, 0.1);
+    height: 100%;
+}
+*/
+
+
+.match-status {
+    background-color: var(--color-bg-alert);
+    color: var(--color-text-alert);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    margin-right: auto;
+  }
+  
+  .match-status:before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: currentColor;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .match-tournament {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+  }
+  
+  .match-tournament img {
+    position: relative;
+    width: 20px;
+  }
+  
+  .match-actions {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .btn-icon {
+    border: 0;
+    background-color: transparent;
+    color: var(--color-text-icon);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .match-content {
+    display: flex;
+    position: relative;
+  }
+  
+  .column {
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% / 3);
+  }
+  
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .team-logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  
+  .team-logo img {
+    width: 150%;
+  }
+  
+  .team-name {
+    text-align: center;
+      text-shadow: 0px 0px 15px rgb(0, 0, 0);
+  }
+  
+  .vertical{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .match-score{
+      font-size: 2em;
+  }
+
+body {
+    background-image: url('../imagenes/web_champions.png');
+    
+}
+
+  
+@media screen and (max-width: 750px) {
+    .match {
+      min-width: 100%;
+      border-radius: 10px;
+      height: 200px;
+    }
+  
+    .match-header {
+      padding: 8px;
+    }
+  
+    .match-actions {
+      display: none;
+    }
+  
+    .column {
+      width: 100%;
+      padding: 16px;
+    }
+  
+    .team-name {
+      font-size: 16px;
+    }
+  
+    .team-logo {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .match-bet-place {
+      padding: 8px 16px;
+      font-size: 12px;
+      bottom: -8px;
+    }
+  }
+  
+  @media screen and (max-width: 440px) {
+    .match {
+      flex-direction: column;
+      height: 220px;
+    }
+  
+    .match-header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .match-tournament {
+      margin-bottom: 8px;
+    }
+  
+    .match-actions {
+      margin-top: 8px;
+    }
+  
+    .column {
+      padding: 16px;
+    }
+  
+    .match-score {
+      flex-direction: column;
+      align-items: center;
+      font-size: 1em;
+    }
+  
+    .match-score-divider {
+      display: none;
+    }
+  
+    .match-time-lapsed {
+      margin-top: 4px;
+    }
+  
+    .match-bet-options {
+      flex-wrap: wrap;
+    }
+  
+    .match-bet-option {
+      margin-bottom: 8px;
+    }
+  
+    .match-bet-place {
+      padding: 8px 16px;
+      font-size: 12px;
+      bottom: -8px;
+    }
+  }
+  
+  @media screen and (max-width: 360px) {
+    .match-bet-place {
+      padding: 8px;
+      font-size: 10px;
+    }
+  }

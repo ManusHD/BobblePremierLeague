@@ -1,0 +1,27 @@
+body{
+    background-image: url('../imagenes/fondopaginaweb_liga2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container{
+    background-color: white;
+    max-width: 800px;
+    min-width: 300px;
+    margin: 1em auto;
+    padding: 1em 2em 1em;
+    border-radius: 10px;
+    text-align: justify;
+}
+/*
+h1{
+
+}
+
+h3{
+
+}
+
+p{
+
+}*/

@@ -1,0 +1,61 @@
+.contenedor{
+    text-align: center;
+    width: 100%;
+}
+
+tr:nth-child(odd){
+    background-color: #878787;
+}
+
+.cabeceras{
+    background-color: #323232;
+    color: var(--color-liga-actual);
+    padding: 3px;
+}
+
+h1{
+    background-color: #323232;
+    color: var(--color-liga-actual);
+    margin: 0;
+    padding: 0.3em;
+}
+
+.titulo{
+    background-color: var(--color-liga-actual);
+    color: #323232;
+    font-size: 3em;
+    margin-bottom: 0;
+    padding: 0.3em;
+}
+
+table img{
+    width: 3em;
+}
+
+/*1
+.nombreEst{
+    background-color: #878787;
+}*/
+
+h1, table{
+    width: 100%;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+td{
+    border-top: 1px solid #878787;
+    border-bottom: 1px solid #878787;
+    min-width: none;
+}
+
+tr:last-child, td:last-child:not(.cabeceras){
+    background-color: green;
+}
+
+.wide-cell {
+    grid-column-end: span 15; /* La celda ocupará 15 columnas */
+}
+ 

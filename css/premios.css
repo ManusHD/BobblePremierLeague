@@ -1,0 +1,61 @@
+body{
+    background-image: url('../imagenes/fondopaginaweb_liga2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+table{
+    text-align: center;
+    border-collapse: collapse;
+    align-items: center;
+    width: 100%;
+}
+
+.una, .dos{
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.una{
+    text-align: center;
+    background-color: #525252;
+    color: var(--color-historico);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.dos{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255, 0.6);
+}
+
+.dos a{
+    text-decoration: underline;
+    color: #000;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.temporada{
+    background-color: #323232;
+    color: var(--color-historico);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.cabezaDoble{
+    background-color: var(--color-historico);
+    color: #323232;
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
+.cabezaUna{
+    background-color: var(--color-historico);
+    color: #323232;
+    font-size: 2em;
+    font-weight: bold;
+}
