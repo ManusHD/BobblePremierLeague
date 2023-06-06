@@ -1,3 +1,9 @@
+body{
+  background-image: url('../imagenes/fondopaginaweb_liga2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .contenedor{
     text-align: center;
     width: 100%;
@@ -43,6 +49,7 @@ h1, table{
 
 table{
     border-collapse: collapse;
+    background-color: white;
 }
 
 td{
