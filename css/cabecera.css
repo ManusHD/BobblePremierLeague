@@ -123,6 +123,19 @@ label:hover {
               0 0 25px var(--color-liga-actual);
 }
 
+@media  screen and (max-width:714px) {
+
+    .btn-partidos{
+        margin: 6vh 3vh;
+        width: 12vh;
+        font-size: 0.8vh;
+    }
+
+    .btn-partidos a{
+        width: 0.8vh;
+    }
+}
+
 @media screen and (max-width:1080px) {
     .navbar {
         position: relative;
