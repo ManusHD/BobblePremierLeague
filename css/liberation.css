@@ -4,6 +4,7 @@ html, body{
   height: 100%;
   margin: 0;
   background-color: #E8E8E8;
+  min-width: 950px;
 }
 
 .header{
@@ -31,6 +32,10 @@ html, body{
   flex-grow: 1;
 }
 
+.bracket-level:nth-child(even){
+  background-color: #a4b81a;
+}
+
 .bracket-matchup{
   width: 90%;
   margin: auto;
@@ -48,6 +53,7 @@ html, body{
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: clamp(100px, 100%, 800px);
 }
 
 .bracket-name{
