@@ -3,8 +3,11 @@ html, body{
   width: 100%;
   height: 100%;
   margin: 0;
-  background-color: #E8E8E8;
+  /*background-color: #E8E8E8;*/
   min-width: 950px;
+  background-image: url('../imagenes/fondopaginaweb_copa.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header{
@@ -33,8 +36,9 @@ html, body{
 }
 
 .bracket-level:nth-child(even){
-  background-color: #a4b81a;
+  background-color: rgb(164, 184, 26, 0.5);
 }
+
 
 .bracket-matchup{
   width: 90%;
