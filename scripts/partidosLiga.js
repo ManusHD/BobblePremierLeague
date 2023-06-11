@@ -149,11 +149,11 @@ fetch('https://sheets.googleapis.com/v4/spreadsheets/1zaCd8es0pm2md9X8AJwJRm-0J2
       console.log(`Comparando el PartidoA: ${fechaA} con el PartidoB: ${fechaB}`);
     
       // Verificar si uno o ambos partidos no tienen fecha y hora
-      if (!fechaA && !fechaB) {
+      if (fechaA == 'T' && fechaB == 'T') {
         return 0; // Ambos partidos están en blanco, no se cambia el orden
-      } else if (fechaA === 'undefinedTundefined') {
+      } else if (fechaA === 'T') {
         return 1; // Partido A está en blanco, se coloca después de partido B
-      } else if (fechaB === 'undefinedTundefined') {
+      } else if (fechaB === 'T') {
         return -1; // Partido B está en blanco, se coloca después de partido A
       }
     
