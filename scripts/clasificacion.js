@@ -32,7 +32,7 @@ function getAndShowData(tabla, range) {
 
         tbody.appendChild(row);
 
-        if (index < 5) {
+        if (index < 7) {
           switch (range) {
             case 'Clasificacion!B77:J96':
               if(index < 4){
@@ -40,15 +40,27 @@ function getAndShowData(tabla, range) {
               }
               break;
             case 'Clasificacion!B46:J69':
-              row.classList.add('destacado');
+              if(index < 5){
+                row.classList.add('destacado');
+              }
               break;
             case 'Clasificacion!B11:J38':
               if(index < 4){
-                row.classList.add('destacado');
+                row.classList.add('destacado3');
+              }
+              if(index == 4 || index == 5){
+                row.classList.add('destacado45');
               }
               break;
           }
         }
+
+        if(index % 2 == 0){
+          row.classList.add('par');
+        }else{
+          row.classList.add('impar');
+        }
+
       });
     });
 }
@@ -136,4 +148,3 @@ function plusSlides(n) {
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
