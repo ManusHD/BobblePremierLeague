@@ -58,7 +58,7 @@ td{
     min-width: none;
 }
 
-tr:last-child, td:last-child:not(.cabeceras){
+tr:last-child, td:last-child:not(.cabeceras), tr:nth-child(27){
     background-color: green;
 }
 
