@@ -39,7 +39,8 @@ fetch('https://sheets.googleapis.com/v4/spreadsheets/1zaCd8es0pm2md9X8AJwJRm-0J2
                         celda.classList.add('cabezaDoble');
                     }
 
-                    if (cellValue.toLowerCase().includes('pp')) {
+                    if (cellValue.toLowerCase().includes('pp')
+                    || cellValue.toLowerCase().startsWith('-')) {
                         celda.classList.add('rojo');
                     }
 
