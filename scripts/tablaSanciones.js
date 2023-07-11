@@ -35,7 +35,8 @@ fetch('https://sheets.googleapis.com/v4/spreadsheets/1zaCd8es0pm2md9X8AJwJRm-0J2
             celda.classList.add('reglas');
         }
 
-        if(cellValue.toLowerCase().includes('sanción')){
+        if(cellValue.toLowerCase().includes('sanción') || 
+        (cellValue.toLowerCase().includes('sanciones') && !cellValue.toLowerCase().includes('total'))){
           celda.style.backgroundColor = COLORES_TABLA[cellValue[0]];
           if(cellValue[1] != ' '){
             celda.style.backgroundColor = COLOR_DEFECTO;
