@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+/*
+:root {
+  --color-text-primary: #f8df94;
+  --color-text-secondary: #8A8F98;
+  --color-text-alert: #d72641;
+  --color-text-icon: #dbdade;
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #f3f5f9;
+  --color-bg-alert: #fdeaec;
+  --color-theme-primary: #623ce6;
+}*/
+
+body{
+  background-image: url('../imagenes/fondopaginaweb_liga2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1{
+  text-align: center;
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 5px 5px 5px #303030;
+}
+
+.partidos img{
+    width: 4em;
+}
+
+.liga-partidos{
+    text-align: center;
+}
+
+.partido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em;
+    background-color: antiquewhite;
+    border-radius: 4em;
+    padding: 0 2em;
+}
+
+.partido-inv{
+  background-color: var(--color-t3);
+  box-shadow: 0 0 5px #faebd7,
+      0 0 25px antiquewhite,
+      0 0 75px antiquewhite
+}
+
+.partido-info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70%;
+}
+
+.elemento{
+    width: 14.285%;
+}
+
+.jugado{
+  background-color: var(--color-t3);
+  border-radius: 2em;
+}
+
+.jugado-inv{
+  background-color: antiquewhite;
+}
+
+.mvp img{
+  width: 40px;
+}
+
+.mvp{
+  filter: drop-shadow(1 1 40px #000);
+}
+
+.btn-partidos, .btn-partidos-liga{
+    position: relative;
+}
+
+.btn-partidos{
+    margin: 2em 0;
+}
+
+@media screen and (max-width: 714px) {
+  h1{
+    text-align: center;
+    font-size: 1em;
+  }
+  
+  .elemento{
+    width: 14.285%;
+  }
+
+  .partidos img{
+      width: 3.5vh;
+  }
+
+  .resultado{
+    width: 8vh;
+  }
+  
+  .partido{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 4em;
+      padding: 0 1vh;
+  }
+
+  .partido-info{
+    width: 100%;
+  }
+
+  .fecha{
+    width: 15%;
+  }
+
+  p{
+    font-size: 1.2vh;
+  }
+
+  .mvp img{
+    width: 2vh;
+  }
+}
