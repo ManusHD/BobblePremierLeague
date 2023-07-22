@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Donaciones</title>
+	<!--<script src="scripts/inicio.js"></script>-->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="imagenes/isotipo.png"/>
+	<link href="css/cabecera.css" rel="stylesheet">
+	<link href="css/footer.css" rel="stylesheet">
+	<link href="css/donaciones.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<!--Aquí empieza la cabecera-->
+	<div class="navbar">
+		<a class="logo" href="index.html"><img class="img" src="imagenes/isotipo.png"></a>
+		<input type="checkbox" id="menu" hidden>
+		<label class="label" for="menu"><i class="fa fa-bars"></i></label>
+		<div class="lista"> <!--Este es su nav-->
+			<label class="label" for="menu">X</label> <!--Este es su label-->
+			<a class="list" href="clasificacion.html">Clasificación</a> <!--Esta es su ul-->
+			<a class="list" href="partidos.html">Próximos partidos</a>
+			<a class="list" href="champions.html">Bobble Champions Cup</a>
+			<a class="list" href="liberationCup.html">Bobble Liberation Cup</a>
+			<a class="list" href="premios.html">Premios Bobble</a>
+			<a class="list" href="records.html">Récords Bobble</a>
+			<a class="list" id="fundar" href="fundarClub.html">Funda tu club</a>
+		</div>
+	</div>
+	<!--Aquí termina la cabecera-->
+
+    <h2>¿Nos echas una mano a mantener la página?</h2>
+
+    <h1>DONACIONES</h1>
+
+    <div class="donaciones">
+        <div class="tipo-donacion">
+            <h2>Transferencia bancaria</h2>
+            <p>Número de cuenta <span>(click para copiar)</span></p>
+            <p id="bloque" onclick="copiarAlPortapapeles()">ES4501827269310201587531</p>
+        </div>
+        <div class="tipo-donacion">
+            <h2>Bizum</h2>
+            <p>Busca mi número en el <a class="wa" href="https://web.whatsapp.com/" target="_blank">Grupo de WhatsApp</a> de la Bobble Premier League, el número es:</p>
+            <p style="text-decoration: underline;">+34 68*****98</p>
+        </div>
+    </div>
+    <div class="cantidades">
+        <div class="cantidad">
+            <h2>1€ o más</h2>
+            <p>Ayudas con el mantenimiento de la página</p>
+        </div>
+        <div class="cantidad">
+            <h2>5€ o más</h2>
+            <p>Ayudas con la creación de nuevas pestañas</p>
+        </div>
+        <div class="cantidad">
+            <h2>10€ o más</h2>
+            <p>
+                Ayudas con la creación y mejora de pestañas nuevas y ya existentes.
+                Puedes hacer que algunas pestañas sean legibles también desde dispositivos
+                móviles gracias a tu aportación.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function copiarAlPortapapeles() {
+            // Obtener el contenido del bloque que deseas copiar
+            const contenido = document.getElementById('bloque').innerText;
+
+            // Crear un elemento de texto temporal para copiar el contenido
+            const elementoTemporal = document.createElement('textarea');
+            elementoTemporal.value = contenido;
+
+            // Asegurarse de que el elemento no se muestre en la pantalla
+            elementoTemporal.style.position = 'fixed';
+            elementoTemporal.style.opacity = 0;
+
+            // Agregar el elemento temporal al documento
+            document.body.appendChild(elementoTemporal);
+
+            // Seleccionar el contenido del elemento temporal
+            elementoTemporal.select();
+
+            // Copiar el contenido seleccionado al portapapeles
+            document.execCommand('copy');
+
+            // Eliminar el elemento temporal
+            document.body.removeChild(elementoTemporal);
+
+            // Mensaje opcional para indicar que el contenido ha sido copiado
+            alert('¡Contenido copiado al portapapeles!');
+        }
+    </script>
+
+	<!--Aquí empieza el footer-->
+	<footer>
+		<a class="logo" href="index.html"><img class="img" src="imagenes/Logo.png"></a>
+		<div class="medioFooter">
+            <p><a href="donaciones.html">Donaciones</a></p>
+		  <p><a href="reglas.html">Reglas</a></p>
+		  <p><a href="sanciones.html" >Sanciones</a></p>
+		  <p><a href="tablaSanciones.html">Tabla de sanciones</a></p>
+		  <p><a href="estadisticas.html">Estadísticas</a></p>
+		</div>
+		<div class="rrss">
+		  <a href="https://www.youtube.com/@bobblepremierleagueofficial" target="_blank"><img src="imagenes/youtube.png"></a>
+		  <br>
+		  <a href="https://www.tiktok.com/@bobblepremierleague" target="_blank"><img src="imagenes/tiktok.png"></a>
+		  <a href="https://twitter.com/bobblepl_es" style="padding-top:4px" target="_blank"><img src="imagenes/logotwitter.png"></a>
+		</div>
+	  </footer>
+
+</body>
+
+</html>
+ 
