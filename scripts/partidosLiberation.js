@@ -15,6 +15,7 @@ fetch('https://sheets.googleapis.com/v4/spreadsheets/1zaCd8es0pm2md9X8AJwJRm-0J2
 
     const container = document.querySelector('.partidos');
     const jornadas = [];
+    let actual = 6;
 
     matches.forEach((match, index) => {
       const imageSrc = `imagenes/${match[0].toLowerCase().replace(/\s+/g, '')}.png`;
@@ -22,7 +23,7 @@ fetch('https://sheets.googleapis.com/v4/spreadsheets/1zaCd8es0pm2md9X8AJwJRm-0J2
       const imageHtml = `<img src="${imageSrc}" />`;
       const imageHtml2 = `<img src="${imageSrc2}" />`;
 
-      const jornadaActual = Math.floor(index / 7) + 1;
+      const jornadaActual = Math.floor(index / actual) + 1;
       if (!jornadas[jornadaActual - 1]) {
         jornadas[jornadaActual - 1] = [];
       }
@@ -162,9 +163,25 @@ fetch('https://sheets.googleapis.com/v4/spreadsheets/1zaCd8es0pm2md9X8AJwJRm-0J2
     }
     
 
+    let pasado8 = false;
+    let pasado4 = false;
+    let pasado2 = false;
     jornadas.forEach((jornada, index) => {
       jornada.sort(compararFechas);
       jornada.forEach(partido => {
+        console.log(index);
+        if(index == 0 && !pasado8){
+          container.innerHTML += '<h1>Octavos<h1/>'
+          pasado8 = true;
+        }
+        if(index == 1 && !pasado4){
+          container.innerHTML += '<h1>Cuartos<h1/>'
+          pasado4 = true;
+        }
+        if(index == 2 && !pasado2){
+          container.innerHTML += '<h1>Semifinales<h1/>'
+          pasado2 = true;
+        }
         container.innerHTML += partido.partido;
       });
     });
