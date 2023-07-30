@@ -8,7 +8,7 @@ const dias = [
   'Sábado',
 ];
 
-fetch('https://sheets.googleapis.com/v4/spreadsheets/1zaCd8es0pm2md9X8AJwJRm-0J22_7UxoRNAztGzpkmk/values/Partidos!P2:T11?key=AIzaSyD1qXjPmgBaRtX0zJtH76nvU708Gvs3A-g')
+fetch('https://sheets.googleapis.com/v4/spreadsheets/1zaCd8es0pm2md9X8AJwJRm-0J22_7UxoRNAztGzpkmk/values/Partidos!P2:T13?key=AIzaSyD1qXjPmgBaRtX0zJtH76nvU708Gvs3A-g')
 .then(response => response.json())
   .then(data => {
     const matches = data.values;
@@ -162,25 +162,24 @@ fetch('https://sheets.googleapis.com/v4/spreadsheets/1zaCd8es0pm2md9X8AJwJRm-0J2
       return new Date(fechaA) - new Date(fechaB);
     }
     
-
-    let pasado8 = false;
-    let pasado4 = false;
-    let pasado2 = false;
+    let j = 0;
     jornadas.forEach((jornada, index) => {
       jornada.sort(compararFechas);
       jornada.forEach(partido => {
+        j++;
+        console.log("Jota vale: " + j);
         console.log(index);
-        if(index == 0 && !pasado8){
+        if(j === 1){
           container.innerHTML += '<h1>Octavos<h1/>'
-          pasado8 = true;
         }
-        if(index == 1 && !pasado4){
+        if(j === 7){
           container.innerHTML += '<h1>Cuartos<h1/>'
-          pasado4 = true;
         }
-        if(index == 2 && !pasado2){
+        if(j === 11){
           container.innerHTML += '<h1>Semifinales<h1/>'
-          pasado2 = true;
+        }
+        if(j === 13){
+          container.innerHTML += '<h1>Final<h1/>'
         }
         container.innerHTML += partido.partido;
       });
